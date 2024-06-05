@@ -13,13 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.trungcs.simple_dependency_injection.simple_di.annotation.SimpleInject
-import com.trungcs.simple_dependency_injection.simple_di.component.AppComponent
 import com.trungcs.simple_dependency_injection.simple_di.component.SimpleAppComponent
-import kotlin.reflect.KClass
-import kotlin.reflect.KMutableProperty
-import kotlin.reflect.full.declaredMemberProperties
-import kotlin.reflect.full.hasAnnotation
-import kotlin.reflect.jvm.isAccessible
 
 class HelloDIActivity : ComponentActivity() {
 
