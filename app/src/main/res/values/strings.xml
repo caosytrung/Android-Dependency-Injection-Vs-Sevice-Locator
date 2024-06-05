@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DIAndServiceLocator</string>
+    <string name="move_to_di_activity">Move to DI Example</string>
 </resources>

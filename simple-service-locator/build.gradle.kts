@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.trungcs.simple_dependency_injection"
+    namespace = "com.trungcs.simple_service_locator"
     compileSdk = 34
 
     defaultConfig {
@@ -23,15 +23,6 @@ android {
             )
         }
     }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
-    }
-
-    buildFeatures {
-        compose =  true
-    }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -46,7 +37,6 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(libs.kotlin.reflect)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
