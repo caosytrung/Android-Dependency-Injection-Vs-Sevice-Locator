@@ -1,12 +1,12 @@
-package com.trungcs.simple_dependency_injection.simple_di.component
+package com.trungcs.simple_dependency_injection.simple_di_lib.component
 
 import android.app.Activity
 import androidx.fragment.app.Fragment
-import com.trungcs.simple_dependency_injection.simple_di.SimpleDIContainer
-import com.trungcs.simple_dependency_injection.simple_di.annotation.SimpleComponent
-import com.trungcs.simple_dependency_injection.simple_di.annotation.SimpleInject
-import com.trungcs.simple_dependency_injection.simple_di.error.SimpleDIException
-import com.trungcs.simple_dependency_injection.ui.di.DataModule
+import com.trungcs.simple_dependency_injection.main.di.DataModule
+import com.trungcs.simple_dependency_injection.simple_di_lib.SimpleDIContainer
+import com.trungcs.simple_dependency_injection.simple_di_lib.annotation.SimpleComponent
+import com.trungcs.simple_dependency_injection.simple_di_lib.annotation.SimpleInject
+import com.trungcs.simple_dependency_injection.simple_di_lib.error.SimpleDIException
 import kotlin.reflect.KClass
 import kotlin.reflect.KMutableProperty
 import kotlin.reflect.full.declaredMemberProperties
@@ -28,7 +28,6 @@ class SimpleAppComponent private constructor(private val diContainer: SimpleDICo
         diContainer.handleModules(componentAnno.modules)
     }
 
-    //(property as KMutableProperty<*>).setter.annotations
     override fun injectActivity(activity: Activity) {
         injectDependencies(activity)
     }
@@ -54,5 +53,4 @@ class SimpleAppComponent private constructor(private val diContainer: SimpleDICo
             return SimpleAppComponent(diContainer)
         }
     }
-
 }

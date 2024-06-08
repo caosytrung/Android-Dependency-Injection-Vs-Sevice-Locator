@@ -1,4 +1,4 @@
-package com.trungcs.simple_dependency_injection.ui
+package com.trungcs.simple_service_locator.main.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -12,19 +12,14 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.trungcs.simple_dependency_injection.simple_di.annotation.SimpleInject
-import com.trungcs.simple_dependency_injection.simple_di.component.SimpleAppComponent
+import com.trungcs.simple_service_locator.service_locator.SimpleServiceLocator
 
-class HelloDIActivity : ComponentActivity() {
+class HelloServiceLocatorActivity : ComponentActivity() {
 
-    @SimpleInject
-    lateinit var viewModel: HelloViewModel
+    private var viewModel: HelloServiceLocatorViewModel = SimpleServiceLocator.instance.get()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // Inject dependencies
-        SimpleAppComponent.build().injectActivity(this)
 
         setContent {
             Surface(

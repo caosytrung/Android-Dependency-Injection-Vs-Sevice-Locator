@@ -1,9 +1,9 @@
-package com.trungcs.simple_dependency_injection.simple_di
+package com.trungcs.simple_dependency_injection.simple_di_lib
 
-import com.trungcs.simple_dependency_injection.simple_di.annotation.SimpleInject
-import com.trungcs.simple_dependency_injection.simple_di.annotation.SimpleProvider
-import com.trungcs.simple_dependency_injection.simple_di.annotation.SimpleSingleton
-import com.trungcs.simple_dependency_injection.simple_di.error.SimpleDIException
+import com.trungcs.simple_dependency_injection.simple_di_lib.annotation.SimpleInject
+import com.trungcs.simple_dependency_injection.simple_di_lib.annotation.SimpleProvider
+import com.trungcs.simple_dependency_injection.simple_di_lib.annotation.SimpleSingleton
+import com.trungcs.simple_dependency_injection.simple_di_lib.error.SimpleDIException
 import kotlin.reflect.KClass
 import kotlin.reflect.full.createInstance
 import kotlin.reflect.full.functions

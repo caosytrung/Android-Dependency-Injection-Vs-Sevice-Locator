@@ -20,7 +20,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.trungcs.diandservicelocator.ui.theme.DIAndServiceLocatorTheme
-import com.trungcs.simple_dependency_injection.ui.HelloDIActivity
+import com.trungcs.simple_dependency_injection.main.HelloDIActivity
+import com.trungcs.simple_service_locator.main.ui.HelloServiceLocatorActivity
 
 class MainActivity : ComponentActivity() {
 
@@ -38,6 +39,10 @@ class MainActivity : ComponentActivity() {
                             Text(text = stringResource(id = R.string.move_to_di_activity))
                         }
                         Spacer(modifier = Modifier.height(12.dp))
+
+                        ElevatedButton(onClick = ::openServiceLocatorActivity) {
+                            Text(text = stringResource(id = R.string.move_to_sl_activity))
+                        }
                     }
                 }
             }
@@ -46,6 +51,10 @@ class MainActivity : ComponentActivity() {
 
     private fun openDIActivity(){
         startActivity(Intent(this, HelloDIActivity::class.java))
+    }
+
+    private fun openServiceLocatorActivity() {
+        startActivity(Intent(this, HelloServiceLocatorActivity::class.java))
     }
 
     @Composable

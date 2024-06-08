@@ -51,6 +51,7 @@ android {
 
 dependencies {
     implementation(project(":simple-dependency-injection"))
+    implementation(project(":simple-service-locator"))
 
     implementation(libs.kotlin.reflect)
     implementation(libs.androidx.core.ktx)

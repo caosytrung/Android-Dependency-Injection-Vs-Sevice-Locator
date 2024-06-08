@@ -1,4 +1,4 @@
-package com.trungcs.simple_dependency_injection.simple_di.annotation
+package com.trungcs.simple_dependency_injection.simple_di_lib.annotation
 
 // This annotation is to mark to constructor of filed will be injected by the DI container.
 // Use Retention.RUNTIME to get the annotation in runtime-phase

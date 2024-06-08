@@ -1,4 +1,4 @@
-package com.trungcs.simple_dependency_injection.simple_di.annotation
+package com.trungcs.simple_dependency_injection.simple_di_lib.annotation
 
 import kotlin.reflect.KClass
 
