@@ -50,8 +50,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":simple-dagger"))
-    implementation(project(":simple-koin"))
+    implementation(project(":simple-di"))
+    implementation(project(":simple-service-locator"))
 
     implementation(libs.kotlin.reflect)
     implementation(libs.androidx.core.ktx)

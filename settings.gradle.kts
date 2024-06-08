@@ -21,5 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "DIAndServiceLocator"
 include(":app")
-include(":simple-dagger")
-include(":simple-koin")
+include(":simple-di")
+include(":simple-service-locator")
