@@ -1,4 +1,4 @@
-package com.trungcs.simple_dependency_injection.main
+package com.trungcs.simple_dependency_injection.main.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

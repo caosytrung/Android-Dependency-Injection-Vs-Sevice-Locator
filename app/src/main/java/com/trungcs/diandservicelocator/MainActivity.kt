@@ -20,7 +20,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.trungcs.diandservicelocator.ui.theme.DIAndServiceLocatorTheme
-import com.trungcs.simple_dependency_injection.main.HelloDIActivity
+import com.trungcs.simple_dependency_injection.main.ui.HelloDIActivity
 import com.trungcs.simple_service_locator.main.ui.HelloServiceLocatorActivity
 
 class MainActivity : ComponentActivity() {
