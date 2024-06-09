@@ -43,10 +43,12 @@ internal class SimpleDIContainer {
         val moduleInstance = moduleClass.createInstance()
 
         moduleClass.functions.forEach { func ->
+            // reject functions that are not marked as @SimpleProvider
             if (!func.hasAnnotation<SimpleProvider>()) return@forEach
+
+            // Get the return-type (generic) and parameters to initiate the instance
             val returnType =
                 func.returnType.classifier as? KClass<*> ?: return@forEach
-
             val parameters = func.parameters.drop(1).map { parameter ->
                 getInstance(parameter.type.classifier as KClass<*>)
             }
@@ -56,7 +58,7 @@ internal class SimpleDIContainer {
         }
     }
 
-    fun <T : Any> addToSingletonMap(kClass: KClass<T>, instance: Any) {
+    private fun <T : Any> addToSingletonMap(kClass: KClass<T>, instance: Any) {
         cachedInstance[kClass] = instance
     }
 

@@ -10,8 +10,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/simple-dagger" />
-            <option value="$PROJECT_DIR$/simple-koin" />
+            <option value="$PROJECT_DIR$/simple-di" />
+            <option value="$PROJECT_DIR$/simple-service-locator" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

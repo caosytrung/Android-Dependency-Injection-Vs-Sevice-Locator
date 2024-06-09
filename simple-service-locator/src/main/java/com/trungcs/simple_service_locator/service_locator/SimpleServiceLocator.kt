@@ -8,8 +8,10 @@ typealias FactoryCreator<T> = () -> T
 @Suppress("UNCHECKED_CAST")
 internal class SimpleServiceLocator private constructor() {
 
+    // Store singleton instances
     private val singletons = mutableMapOf<KClass<*>, Lazy<*>>()
 
+    // Store the factory methods to initiate diff instance in each call.
     private val factories = mutableMapOf<KClass<*>, FactoryCreator<*>>()
     inline fun <reified T> registerSingleton(noinline instance: () -> T) {
         val x = T::class

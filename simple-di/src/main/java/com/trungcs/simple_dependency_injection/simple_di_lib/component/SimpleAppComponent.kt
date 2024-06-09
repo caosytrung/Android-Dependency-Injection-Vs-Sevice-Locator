@@ -19,7 +19,9 @@ class SimpleAppComponent private constructor(private val diContainer: SimpleDICo
     AppComponent {
 
     init {
-        setupDiContainer()
+        val componentAnno = this::class.findAnnotation<SimpleComponent>()
+            ?: throw SimpleDIException("Please mark this class as @SimpleComponent")
+        diContainer.handleModules(componentAnno.modules)
     }
 
     private fun setupDiContainer() {
